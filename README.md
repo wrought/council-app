@@ -42,6 +42,12 @@ var userId = Package['accounts-base'].Accounts.createUser({username: 'admin', pa
 Package['alanning:roles'].Roles.addUsersToRoles(userId, ['admin', 'moderator', 'manager', 'member']);
 ```
 
+Or, when you have the app opened in your web browser, you can use the web console to call:
+
+```javascript
+Meteor.call('User.invite', email, username)
+```
+
 ## Running ##
 
 To run the application in production you can use [Docker](https://www.docker.com/).
